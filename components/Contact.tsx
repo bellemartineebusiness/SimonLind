@@ -55,10 +55,10 @@ export default function Contact() {
           ) : (
             <form onSubmit={handleSubmit} noValidate>
               {/* 
-                OBS: access_key nedan behöver ersättas med din egen nyckel från web3forms.com
-                Gratis att skapa - tar bara 2 minuter på https://web3forms.com
+                OBS: Sätt NEXT_PUBLIC_WEB3FORMS_KEY i din .env.local-fil.
+                Skapa en gratis nyckel på https://web3forms.com (tar 2 minuter).
               */}
-              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+              <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? ''} />
               <input type="hidden" name="subject" value="Nytt meddelande från Simon Linds portfolio" />
               <input type="checkbox" name="botcheck" className="hidden" />
 
