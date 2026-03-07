@@ -4,7 +4,7 @@ import { useState, FormEvent } from 'react'
 
 // OBS: Sätt NEXT_PUBLIC_WEB3FORMS_KEY i din .env.local-fil.
 // Skapa en gratis nyckel på https://web3forms.com (tar 2 minuter).
-const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HERE'
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '604b7168-08c6-4b2a-9f46-a3ef1581e224'
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -136,6 +136,14 @@ export default function Contact() {
                   'Skicka Meddelande →'
                 )}
               </button>
+
+              <p className="mt-4 text-xs text-gray-500 text-center">
+                🔒 Ditt meddelande skickas och hanteras säkert enligt{' '}
+                <a href="/privacy" className="underline hover:text-gray-700 transition-colors duration-200">
+                  GDPR och vår integritetspolicy
+                </a>
+                . Uppgifterna används endast för att svara på din förfrågan.
+              </p>
             </form>
           )}
         </div>

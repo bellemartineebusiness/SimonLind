@@ -39,6 +39,13 @@ export default function PrivacyPage() {
             <p className="mt-3">
               Denna information används endast för att svara på dina frågor och raderas efter att ärendet är avslutat.
             </p>
+            <p className="mt-3">
+              Formuläret hanteras via tjänsten{' '}
+              <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                Web3Forms
+              </a>
+              , som vidarebefordrar meddelandet direkt till min e-postadress. Web3Forms lagrar inte dina uppgifter efter att meddelandet har levererats. Behandlingen sker i enlighet med GDPR.
+            </p>
           </section>
 
           <section>
