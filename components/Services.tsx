@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const services = [
   {
     icon: '🎨',
@@ -32,7 +34,18 @@ export default function Services() {
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
           Vad Jag <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Erbjuder</span>
         </h2>
-        <p className="text-center text-gray-600 text-lg mb-16">Allt du behöver för en professionell närvaro online</p>
+        <p className="text-center text-gray-600 text-lg mb-8">Allt du behöver för en professionell närvaro online</p>
+        {/* Cloud-nodes decorative icon */}
+        <div className="flex justify-center mb-12">
+          <Image
+            src="/cloud-nodes.svg"
+            alt="Molnbaserade tjänster med noder – dekorativ ikon"
+            width={144}
+            height={108}
+            className="w-36 h-auto object-contain opacity-90"
+            unoptimized
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => (
             <div

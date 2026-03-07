@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16">
@@ -9,9 +11,18 @@ export default function Hero() {
       </div>
       
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
-          Simon Lind
-        </h1>
+        {/* Hero logo */}
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/simon-lind-logo.svg"
+            alt="Simon Lind logotyp"
+            width={400}
+            height={160}
+            className="h-24 sm:h-32 w-auto object-contain"
+            priority
+            unoptimized
+          />
+        </div>
         <p className="text-2xl sm:text-3xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
           Webbutvecklare
         </p>
