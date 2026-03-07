@@ -2,6 +2,10 @@
 
 import { useState, FormEvent } from 'react'
 
+// OBS: Sätt NEXT_PUBLIC_WEB3FORMS_KEY i din .env.local-fil.
+// Skapa en gratis nyckel på https://web3forms.com (tar 2 minuter).
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HERE'
+
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
@@ -54,11 +58,7 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} noValidate>
-              {/* 
-                OBS: Sätt NEXT_PUBLIC_WEB3FORMS_KEY i din .env.local-fil.
-                Skapa en gratis nyckel på https://web3forms.com (tar 2 minuter).
-              */}
-              <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? ''} />
+              <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
               <input type="hidden" name="subject" value="Nytt meddelande från Simon Linds portfolio" />
               <input type="checkbox" name="botcheck" className="hidden" />
 
