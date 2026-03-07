@@ -32,12 +32,19 @@ export default function CookiesPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Vilka cookies använder denna webbplats?</h2>
             <p className="mb-3">
-              Denna webbplats använder endast nödvändiga cookies för grundläggande funktionalitet, såsom:
+              Vi använder endast nödvändiga cookies för kontaktformulär, inga spårningscookies.
+              Mer specifikt används:
             </p>
-            <ul className="list-none space-y-1 ml-2">
-              <li>• Att komma ihåg att du accepterat cookie-policyn</li>
-              <li>• Grundläggande webbplatsfunktionalitet</li>
+            <ul className="list-none space-y-2 ml-2">
+              <li>
+                <strong>cookies-accepted</strong> (localStorage) – lagrar att du accepterat denna
+                cookie-policy, så att bannern inte visas igen. Inget värde skickas till servern.
+              </li>
             </ul>
+            <p className="mt-3 text-sm text-gray-500">
+              Observera: detta är tekniskt sett ett localStorage-värde (webblagring), inte en traditionell
+              cookie – men det fyller samma funktion och regleras på samma sätt.
+            </p>
           </section>
 
           <section>
@@ -45,16 +52,26 @@ export default function CookiesPage() {
             <ul className="list-none space-y-1 ml-2">
               <li>• Spårningscookies</li>
               <li>• Marknadsföringscookies</li>
-              <li>• Analyscookies från tredje part</li>
+              <li>• Analyscookies (t.ex. Google Analytics)</li>
               <li>• Cookies för personlig profilering</li>
+              <li>• Cookies från sociala medieplattformar</li>
+              <li>• Cookies från tredjepartsannonsörer</li>
             </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Rättslig grund</h2>
+            <p>
+              Nödvändiga cookies (som den ovan) kräver inte uttryckligt samtycke enligt e-integritetslagen,
+              men vi informerar dig om dem ändå i enlighet med god transparenspraxis och GDPR.
+            </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Hantera cookies</h2>
             <p>
-              Du kan när som helst rensa cookies i din webbläsares inställningar. Observera att vissa funktioner på
-              webbplatsen kan påverkas om du blockerar cookies.
+              Du kan när som helst rensa cookies och webblagring i din webbläsares inställningar.
+              Observera att om du raderar <em>cookies-accepted</em> kommer cookie-bannern att visas igen.
             </p>
           </section>
 

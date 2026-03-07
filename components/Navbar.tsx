@@ -42,23 +42,31 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
             aria-label="Simon Lind – till toppen"
             onClick={handleNavClick}
           >
             <Image
               src="/simon-lind-logo.svg"
               alt="Simon Lind – Webbutvecklare logotyp"
-              width={160}
-              height={64}
-              className="h-10 w-auto object-contain"
+              width={200}
+              height={80}
+              className="h-14 w-auto object-contain"
               priority
               unoptimized
             />
+            <span className="hidden sm:flex flex-col leading-tight">
+              <span className="text-xl font-extrabold tracking-wide bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                SIMON LIND
+              </span>
+              <span className="text-xs font-medium tracking-widest text-gray-500 uppercase">
+                Webbutvecklare
+              </span>
+            </span>
           </a>
 
           {/* Desktop nav */}
