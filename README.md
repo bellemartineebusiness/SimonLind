@@ -34,7 +34,7 @@ Kopiera `.env.local.example` till `.env.local` och fyll i din Web3Forms-nyckel:
 cp .env.local.example .env.local
 ```
 
-Skapa en gratis nyckel på [web3forms.com](https://web3forms.com) och registrera den med e-postadressen `Simonlind06@icloud.com`.
+Skapa en gratis nyckel på [web3forms.com](https://web3forms.com) och registrera den med din e-postadress.
 
 ```
 NEXT_PUBLIC_WEB3FORMS_KEY=din_nyckel_här
