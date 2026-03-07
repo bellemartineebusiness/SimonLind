@@ -1,0 +1,94 @@
+## Fix: Web3Forms proxy, key fallback, GDPR notice, logging and tests
+
+### Summary of Changes
+
+| File | Change |
+|------|--------|
+| `pages/api/web3forms-proxy.ts` | New server-side API route that proxies form submissions to Web3Forms |
+| `components/ContactForm.tsx` | New form component posting to `/api/web3forms-proxy` with GDPR notice |
+| `components/Contact.tsx` | Refactored to use `ContactForm`; API key no longer in client bundle |
+| `.env.example` | Documents WEB3FORMS_KEY, NEXT_PUBLIC_WEB3FORMS_KEY (commented), SUPPORT_TEST_EMAIL |
+| `README.md` | Added curl test steps, grep security check, updated Vercel deploy instructions |
+
+---
+
+### Why a Proxy?
+
+Previously the Web3Forms API key was embedded in the client-side JavaScript bundle via
+`NEXT_PUBLIC_WEB3FORMS_KEY`. Anyone could extract the key from the browser DevTools.
+
+The new proxy (`pages/api/web3forms-proxy.ts`) runs **server-side only** and injects the key
+from `process.env.WEB3FORMS_KEY` (Vercel secret), which is never shipped to the browser.
+
+Key priority (highest → lowest):
+1. `process.env.WEB3FORMS_KEY` — recommended, set in Vercel → Settings → Environment Variables
+2. `process.env.NEXT_PUBLIC_WEB3FORMS_KEY` — dev convenience, visible to browser
+3. Compile-time fallback constant — quick testing only (see Security Note below)
+
+---
+
+### Testing Steps
+
+#### Local curl test
+
+```bash
+# 1. Start the dev server
+npm run dev
+
+# 2. In a second terminal, send a test submission
+curl -s -X POST http://localhost:3000/api/web3forms-proxy \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Test","email":"test@example.com","message":"Hello from curl"}' | jq .
+```
+
+Expected server log (terminal running `npm run dev`):
+```
+[web3forms-proxy] upstream response: {"success":true,"message":"Email sent successfully!"}
+```
+
+Expected curl response:
+```json
+{"success": true, "message": "Email sent successfully!"}
+```
+
+#### Testing with alternate email (iCloud delivery issues)
+
+Set `SUPPORT_TEST_EMAIL=your-test@gmail.com` in `.env.local`, restart the dev server, and
+submit the form. The proxy will log:
+
+```
+[web3forms-proxy] SUPPORT_TEST_EMAIL set – adding test_recipient: your-test@gmail.com
+[web3forms-proxy] upstream response: {"success":true,...}
+```
+
+Note: Web3Forms may not honour `test_recipient` depending on account settings.
+
+#### Verify API key is NOT in client bundle
+
+```bash
+npm run build
+grep -R "604b7168-08c6-4b2a-9f46-a3ef1581e224" .next/ || true
+```
+
+The grep should return **no results**.
+
+---
+
+### Security Note ⚠️
+
+The fallback key `604b7168-08c6-4b2a-9f46-a3ef1581e224` is included for quick testing and
+is already visible in the repository history. Before making this repository public or
+deploying to production:
+
+1. **Remove the fallback constant** from `pages/api/web3forms-proxy.ts`
+2. **Regenerate your Web3Forms key** at https://web3forms.com
+3. **Set `WEB3FORMS_KEY`** as a Vercel environment variable (not `NEXT_PUBLIC_`)
+4. **Do not commit** `.env.local` — it is already in `.gitignore`
+
+---
+
+### GDPR Notice
+
+The contact form now displays the GDPR notice directly below the submit button:
+
+> Genom att skicka godkänner du att dina uppgifter hanteras enligt vår [Integritetspolicy](/privacy).
