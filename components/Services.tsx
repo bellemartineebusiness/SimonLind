@@ -38,11 +38,12 @@ export default function Services() {
         {/* Cloud-nodes decorative icon */}
         <div className="flex justify-center mb-12">
           <Image
-            src="/cloud-nodes.png"
+            src="/cloud-nodes.svg"
             alt="Molnbaserade tjänster med noder – dekorativ ikon"
             width={144}
             height={108}
             className="w-36 h-auto object-contain opacity-90"
+            unoptimized
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

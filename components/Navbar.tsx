@@ -51,12 +51,13 @@ export default function Navbar() {
             onClick={handleNavClick}
           >
             <Image
-              src="/simon-lind-logo.png"
+              src="/simon-lind-logo.svg"
               alt="Simon Lind – Webbutvecklare logotyp"
               width={160}
               height={64}
               className="h-10 w-auto object-contain"
               priority
+              unoptimized
             />
           </a>
 

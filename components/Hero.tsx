@@ -14,12 +14,13 @@ export default function Hero() {
         {/* Hero logo */}
         <div className="flex justify-center mb-6">
           <Image
-            src="/simon-lind-logo.png"
+            src="/simon-lind-logo.svg"
             alt="Simon Lind logotyp"
             width={400}
             height={160}
             className="h-24 sm:h-32 w-auto object-contain"
             priority
+            unoptimized
           />
         </div>
         <p className="text-2xl sm:text-3xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">

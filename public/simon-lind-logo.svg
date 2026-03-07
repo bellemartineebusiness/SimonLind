@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" fill="none" aria-label="Simon Lind – Webbutvecklare logotyp">
+  <defs>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cloud shape -->
+  <!-- Base rectangle -->
+  <rect x="8" y="58" width="104" height="52" rx="26" fill="url(#cloudGrad)"/>
+  <!-- Left bump -->
+  <circle cx="34" cy="58" r="22" fill="url(#cloudGrad)"/>
+  <!-- Center bump (taller) -->
+  <circle cx="64" cy="46" r="28" fill="url(#cloudGrad)"/>
+  <!-- Right bump -->
+  <circle cx="94" cy="56" r="20" fill="url(#cloudGrad)"/>
+
+  <!-- Network dots on cloud -->
+  <circle cx="42" cy="76" r="5" fill="white" opacity="0.9"/>
+  <circle cx="64" cy="68" r="5" fill="white" opacity="0.9"/>
+  <circle cx="86" cy="76" r="5" fill="white" opacity="0.9"/>
+  <circle cx="53" cy="88" r="5" fill="white" opacity="0.9"/>
+  <circle cx="75" cy="88" r="5" fill="white" opacity="0.9"/>
+  <!-- Connector lines -->
+  <line x1="42" y1="76" x2="64" y2="68" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="64" y1="68" x2="86" y2="76" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="42" y1="76" x2="53" y2="88" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="86" y1="76" x2="75" y2="88" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="53" y1="88" x2="75" y2="88" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="64" y1="68" x2="53" y2="88" stroke="white" stroke-width="1.5" opacity="0.4"/>
+  <line x1="64" y1="68" x2="75" y2="88" stroke="white" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- SIMON LIND text -->
+  <text
+    x="130"
+    y="88"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-weight="800"
+    font-size="52"
+    letter-spacing="2"
+    fill="url(#textGrad)"
+  >SIMON LIND</text>
+
+  <!-- Webbutvecklare subtitle -->
+  <text
+    x="132"
+    y="118"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-weight="400"
+    font-size="18"
+    letter-spacing="4"
+    fill="#8b5cf6"
+    opacity="0.85"
+  >WEBBUTVECKLARE</text>
+</svg>
