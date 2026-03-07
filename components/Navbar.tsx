@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const navLinks = [
   { href: '#om-mig', label: 'Om Mig' },
@@ -45,11 +46,18 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
             aria-label="Simon Lind – till toppen"
             onClick={handleNavClick}
           >
-            Simon Lind
+            <Image
+              src="/simon-lind-logo.png"
+              alt="Simon Lind – Webbutvecklare logotyp"
+              width={160}
+              height={64}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </a>
 
           {/* Desktop nav */}
