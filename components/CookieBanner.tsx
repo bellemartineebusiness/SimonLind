@@ -31,7 +31,7 @@ export default function CookieBanner() {
         <div className="flex-1">
           <p className="font-semibold text-gray-900 mb-1">🍪 Denna webbplats använder cookies</p>
           <p className="text-sm text-gray-600">
-            Vi använder endast nödvändiga cookies för grundläggande funktionalitet. Inga spårnings- eller marknadsföringscookies.
+            Vi använder endast nödvändiga cookies för kontaktformulär, inga spårningscookies.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
