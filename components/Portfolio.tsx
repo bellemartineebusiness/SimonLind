@@ -3,7 +3,7 @@ const projects = [
     title: 'Projektgaranti Stockholm AB',
     description: 'En professionell hemsida för Projektgaranti Stockholm AB, ett bygggarantiföretag som tillhandahåller entreprenad- och konsultgarantier.',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    link: 'https://projektgaranti.vercel.app',
+    link: 'https://projektgaranti-bellemartineebusiness-projects.vercel.app',
     comingSoon: false,
   },
   {
