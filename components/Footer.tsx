@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Kontaktinformation – krävs enligt E-handelslagen */}
           <address className="not-italic text-gray-400 text-sm space-y-1 mb-6">
             {/* TODO: Byt ut mot din riktiga postadress */}
-            <p>Postadress: [Din adress]</p>
+            
             <p>
               E-post:{' '}
               <a

@@ -62,7 +62,7 @@ export default function Portfolio() {
                     className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 min-h-[44px]"
                     aria-label={`Se demo av ${project.title} - öppnas i ny flik`}
                   >
-                    Se Demo →
+                   Besök hemsidan →
                   </a>
                 )}
               </div>
