@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, FormEvent } from 'react'
+import { useState, FormEvent, useRef } from 'react'
 
 // OBS: Sätt NEXT_PUBLIC_WEB3FORMS_KEY i din .env.local-fil.
 // Skapa en gratis nyckel på https://web3forms.com (tar 2 minuter).
@@ -8,9 +8,18 @@ const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '604b7168-08c6-4b
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [gdprAccepted, setGdprAccepted] = useState(false)
+  const [gdprError, setGdprError] = useState(false)
+  const gdprRef = useRef<HTMLInputElement>(null)
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    if (!gdprAccepted) {
+      setGdprError(true)
+      gdprRef.current?.focus()
+      return
+    }
+    setGdprError(false)
     setStatus('loading')
 
     const form = e.currentTarget
@@ -117,6 +126,34 @@ export default function Contact() {
                   </a>
                 </div>
               )}
+
+              {/* GDPR-samtycke – krävs enligt GDPR */}
+              <div className="mb-6">
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    ref={gdprRef}
+                    type="checkbox"
+                    id="gdpr"
+                    name="gdpr_consent"
+                    required
+                    checked={gdprAccepted}
+                    onChange={(e) => setGdprAccepted(e.target.checked)}
+                    className="mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 shrink-0"
+                    aria-required="true"
+                  />
+                  <span className="text-sm text-gray-600">
+                    Jag har läst och godkänner{' '}
+                    <a href="/privacy" className="underline text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                      integritetspolicyn
+                    </a>{' '}
+                    och samtycker till att mina uppgifter behandlas för att besvara min förfrågan.{' '}
+                    <span className="text-pink-500" aria-label="obligatoriskt">*</span>
+                  </span>
+                </label>
+                {gdprError && (
+                  <p className="mt-1 text-xs text-red-500" role="alert">Du måste godkänna integritetspolicyn för att skicka formuläret.</p>
+                )}
+              </div>
 
               <button
                 type="submit"
