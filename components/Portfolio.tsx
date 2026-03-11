@@ -19,7 +19,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
           Mina <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Projekt</span>
         </h2>
         <p className="text-center text-gray-600 text-lg mb-16">Exempel på hemsidor jag har byggt</p>
@@ -33,7 +33,7 @@ export default function Portfolio() {
               <div className="h-48 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center">
                 <span className="text-6xl" aria-hidden="true">🖥️</span>
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">

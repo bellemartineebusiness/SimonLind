@@ -50,14 +50,14 @@ export default function Contact() {
   return (
     <section id="kontakt" className="py-20 bg-gray-50">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
           Kontakta <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Mig</span>
         </h2>
         <p className="text-center text-gray-600 text-lg mb-12">
           Behöver du en hemsida? Fyll i formuläret nedan så återkommer jag inom 24 timmar.
         </p>
 
-        <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+        <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-gray-100">
           {status === 'success' ? (
             <div className="text-center py-8">
               <div className="text-5xl mb-4" aria-hidden="true">✅</div>
@@ -81,7 +81,7 @@ export default function Contact() {
                   name="name"
                   required
                   autoComplete="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400"
+                  className="w-full px-4 py-3 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400"
                   placeholder="Ditt namn"
                   aria-required="true"
                 />
@@ -97,7 +97,7 @@ export default function Contact() {
                   name="email"
                   required
                   autoComplete="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400"
+                  className="w-full px-4 py-3 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400"
                   placeholder="din@email.se"
                   aria-required="true"
                 />
@@ -112,7 +112,7 @@ export default function Contact() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400 resize-none"
+                  className="w-full px-4 py-3 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400 resize-none"
                   placeholder="Berätta om ditt projekt..."
                   aria-required="true"
                 ></textarea>
@@ -189,7 +189,7 @@ export default function Contact() {
           <p className="text-gray-600 mb-2">Eller maila direkt:</p>
           <a
             href="mailto:Simonlind06@icloud.com"
-            className="inline-flex items-center gap-2 text-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+            className="inline-flex items-center gap-2 text-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200 break-all"
             aria-label="Maila Simon Lind på Simonlind06@icloud.com"
           >
             📧 Simonlind06@icloud.com

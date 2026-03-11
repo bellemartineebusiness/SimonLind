@@ -23,15 +23,16 @@ export default function PrivacyPage() {
         <div className="prose prose-gray max-w-none space-y-8 text-gray-700 leading-relaxed">
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Företagsinformation</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Kontaktinformation</h2>
             <p className="mb-2">Denna webbplats drivs av:</p>
             <address className="not-italic ml-2 space-y-1">
               <p className="font-medium">Simon Lind</p>
-              <p>Organisationsnummer: 20060101-XXXX</p>
-              <p>Postadress: Exempelgatan 1, 123 45 Stockholm</p>
+              <p className="text-sm text-gray-500">Privatperson</p>
+              {/* TODO: Byt ut mot din riktiga postadress */}
+              <p>Postadress: [Din adress]</p>
               <p>
                 E-post:{' '}
-                <a href="mailto:Simonlind06@icloud.com" className="text-blue-600 hover:underline">
+                <a href="mailto:Simonlind06@icloud.com" className="text-blue-600 hover:underline break-all">
                   Simonlind06@icloud.com
                 </a>
               </p>
@@ -121,11 +122,12 @@ export default function PrivacyPage() {
             </p>
             <address className="not-italic ml-2 space-y-1">
               <p className="font-medium">Simon Lind</p>
-              <p>Organisationsnummer: 20060101-XXXX</p>
-              <p>Postadress: Exempelgatan 1, 123 45 Stockholm</p>
+              <p className="text-sm text-gray-500">Privatperson</p>
+              {/* TODO: Byt ut mot din riktiga postadress */}
+              <p>Postadress: [Din adress]</p>
               <a
                 href="mailto:Simonlind06@icloud.com"
-                className="text-blue-600 hover:underline"
+                className="text-blue-600 hover:underline break-all"
                 aria-label="Maila Simon Lind på Simonlind06@icloud.com"
               >
                 E-post: Simonlind06@icloud.com
