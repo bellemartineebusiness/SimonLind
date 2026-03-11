@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section id="om-mig" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10 md:mb-16">
           Om <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Mig</span>
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-12">

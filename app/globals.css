@@ -4,7 +4,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 5rem; /* matches fixed navbar height h-20 = 80px = 5rem */
+  overflow-x: hidden; /* prevent horizontal scroll on mobile */
+}
+
+body {
+  overflow-x: hidden;
 }
 
 @layer base {

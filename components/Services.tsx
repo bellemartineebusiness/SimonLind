@@ -31,7 +31,7 @@ export default function Services() {
   return (
     <section id="tjänster" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
           Vad Jag <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Erbjuder</span>
         </h2>
         <p className="text-center text-gray-600 text-lg mb-8">Allt du behöver för en professionell närvaro online</p>
@@ -50,7 +50,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} mb-6 shadow-md`}>
                 <span className="text-3xl" aria-hidden="true">{service.icon}</span>
