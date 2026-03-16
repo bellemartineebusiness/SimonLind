@@ -29,7 +29,7 @@ export default function PrivacyPage() {
               <p className="font-medium">Simon Lind</p>
               <p className="text-sm text-gray-500">Privatperson</p>
               {/* TODO: Byt ut mot din riktiga postadress */}
-              <p>Postadress: [Din adress]</p>
+              
               <p>
                 E-post:{' '}
                 <a href="mailto:Simonlind06@icloud.com" className="text-blue-600 hover:underline break-all">
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
               <p className="font-medium">Simon Lind</p>
               <p className="text-sm text-gray-500">Privatperson</p>
               {/* TODO: Byt ut mot din riktiga postadress */}
-              <p>Postadress: [Din adress]</p>
+             
               <a
                 href="mailto:Simonlind06@icloud.com"
                 className="text-blue-600 hover:underline break-all"

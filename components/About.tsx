@@ -14,13 +14,13 @@ export default function About() {
           </div>
           <div>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Hej! Jag heter Simon Lind och hjälper företag och entreprenörer att få en professionell närvaro online.
+             Hej! Jag heter Simon Lind. Jag levererar 50 000 kronors kvalitet för mellan 5 000 och 12 000 kronor genom att arbeta direkt i koden.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Jag skapar moderna hemsidor som är snabba, mobilanpassade och färdiga att använda direkt. Med fokus på användarvänlighet och design ser jag till att din webbplats både ser bra ut och fungerar perfekt på alla enheter.
+            Mina sidor får A-betyg i säkerhet, vilket de flesta dyra sajter missar. Du får en blixtsnabb sida som du enkelt uppdaterar själv.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Behöver du en hemsida? Kontakta mig för en kostnadsfri offert!
+              Vill du ha en hemsida i världsklass? Hör av dig för en offert!
             </p>
             <a
               href="#kontakt"

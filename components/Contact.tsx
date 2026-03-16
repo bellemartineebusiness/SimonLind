@@ -4,7 +4,7 @@ import { useState, FormEvent, useRef } from 'react'
 
 // OBS: Sätt NEXT_PUBLIC_WEB3FORMS_KEY i din .env.local-fil.
 // Skapa en gratis nyckel på https://web3forms.com (tar 2 minuter).
-const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '604b7168-08c6-4b2a-9f46-a3ef1581e224'
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '??'
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
